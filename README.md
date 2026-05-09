@@ -2,8 +2,8 @@
 
 **AI 驱动的智能研究助手 — 展示多步骤 Agent 工作流的完整项目**
 
-> 本项目是为申请小米 MiMo 百万亿 Token 创造者激励计划而构建的 AI Agent 演示项目。
-> 展示了你使用 AI 驱动构建具体成果的能力（Agent 规划 → 工具调用 → 信息综合）。
+> ResearchMind 是一个展示完整 AI Agent 工作流的开源项目。
+> 核心能力：Agent 自主规划 → 工具调用执行 → 信息综合生成报告。
 
 ---
 
@@ -62,17 +62,17 @@ set LLM_API_KEY=sk-your-api-key-here
 set LLM_API_BASE=https://api.openai.com/v1
 set LLM_MODEL=gpt-4o
 
-# 或使用小米 MiMo API：
-set LLM_API_KEY=your-mimo-api-key
-set LLM_API_BASE=https://api.xiaomimimo.com/v1
-set LLM_MODEL=MiMo-2.5-flash
+# 或使用任意兼容 API（如 MiMo 等）：
+set LLM_API_KEY=your-api-key
+set LLM_API_BASE=https://api.your-provider.com/v1
+set LLM_MODEL=model-name
 ```
 
 ### 3. 运行
 
 ```bash
 # 运行研究
-python -m agentmind "小米MiMo大模型的技术特点与应用场景"
+python -m agentmind "大语言模型在科研领域的应用"
 
 # 查看配置
 python -m agentmind --config
@@ -134,32 +134,7 @@ Agent 可调用 `search_web()` 搜索互联网和 `fetch_page()` 抓取网页内
 
 ### 3. 配置灵活 (`config.py`)
 
-支持任意 OpenAI 兼容 API，可无缝切换 OpenAI / MiMo / 其他服务商。
-
----
-
-## 在 MiMo 申请表里怎么写
-
-在申请表的「请描述你使用 Agent 或 AI 驱动构建的具体成果」一栏，可以参考以下描述：
-
-> **项目名称**: ResearchMind — AI Agent 驱动的智能研究助手
->
-> **项目简介**:
-> 我构建了一个展示完整 AI Agent 工作流的 ResearchMind 项目。该项目实现了一个多步骤 Agent：接收研究主题后，先由 Agent 自主规划研究路径（将主题分解为子问题），然后调用联网搜索工具收集信息，最后综合所有信息生成结构化研究报告。
->
-> **技术栈**:
-> - Python + OpenAI/MiMo API
-> - 多步骤 Agent 工作流（规划 → 搜索 → 综合）
-> - 工具调用（搜索引擎、网页抓取）
-> - 结构化报告生成
->
-> **成果亮点**:
-> - 实现了 AI Agent 的完整生命周期：自主规划、工具调用、信息综合
-> - 代码结构清晰，支持 OpenAI 和 MiMo 等兼容 API 无缝切换
-> - 生成的报告具有实用价值，可直接用于知识获取和决策支持
-> - 项目已开源在 GitHub（附链接）
->
-> **GitHub**: https://github.com/YOUR_USERNAME/researchmind
+支持任意 OpenAI 兼容 API，可无缝切换不同服务商。
 
 ---
 
